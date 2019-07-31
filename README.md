@@ -30,9 +30,9 @@ No arquivo README do projeto explique o funcionamento e a solução adotada na s
 - [Duplique](https://help.github.com/articles/duplicating-a-repository/) este repositório (**não** fork);
 - Siga as boas práticas do git; 
 - Qualquer Framework de estilo;
-- Aurelia, Vue.js, Reac ou Angular 2+;
-- Qualquer tecnologia ou padrão complementar as citadas anteriormente são permitidas com as devidas justificativas no README; e
-- Fique a vontade para definir a stack front-end (KnockoutJS, Angular, Aurelia, React, JQuery, Stylus, PostCSS, SASS, Gulp, Grunt, etc...).
+- Fique a vontade para definir a stack front-end (KnockoutJS, Angular, Aurelia, React, JQuery, Stylus, PostCSS, SASS, Gulp, Grunt, etc...); e
+- Qualquer tecnologia ou padrão complementar as citadas anteriormente são permitidas com as devidas justificativas no README.
+
 
 ## Avaliação
 
