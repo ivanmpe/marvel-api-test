@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> Pedidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let acquisition of acquisitions | async; let i = index">
+      <b>Pedido: {{i+1}} - {{ acquisition.datetime | json }}</b>
+      <button class="btn-details" (click)="getPageAcquisition(acquisition.key)"> Detalhes</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

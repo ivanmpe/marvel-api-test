@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="pageCart()">
+        <ion-icon slot="icon-only" color="primary" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Quadrinhos </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-searchbar type="text" debounce="500" (ionChange)="onSearchChange($event)" placeholder="Pesquise quadrinhos">
+  </ion-searchbar>
+  <ion-list>
+    <ion-row>
+      <ion-col size="6" *ngFor="let comic of comics" (click)="pageComic(comic.id)">
+        <div class="image">
+          <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+        </div>
+        <span class="title">{{comic.title}}</span>
+        <div class="price">
+          R$ {{comic.prices[0].price}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)" *ngIf="searchEmpty">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

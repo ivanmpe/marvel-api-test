@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title> {{title}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="image">
+    <img src="{{image}}.{{extension}}">
+  </div>
+  <div class="details">
+    <h2>Preço:</h2>
+    <span class="span-price">R$ {{price}} </span>
+    <h2>Publicado:</h2>
+    <span class="span-date">{{date | date: 'dd/MM/yyyy'}} </span>
+    <h2><b>Descrição:</b></h2>
+    <span class="span-description" [innerHTML]="description">{{description}}</span>
+  </div>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    <button (click)="subQuantity()" class="btn-operation">-</button>
+    <span class="span-qtd"> {{quantity}} </span>
+    <button  (click)="addQuantity()" class="btn-operation">+</button>
+    <button class="btn-add" (click)="addCart(id)" disabled="{{isEmpty}}" > Adicionar R$ {{price}} </button>
+  </ion-toolbar>
+</ion-footer>

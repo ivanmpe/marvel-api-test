@@ -1,0 +1,40 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> Carrinho </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-list">
+    <ion-list *ngIf="!cartEmpty">
+      <ion-row *ngFor="let cartItem of  cartService.cart">
+        <ion-col size="3" class="title">
+          <p (click)="pageComic(cartItem.id)"> {{cartItem.title}} </p>
+        </ion-col>
+        <ion-col size="5" class="quantity">
+          <button class="quantity-buttom" (click)="subQuantity(cartItem.id)">
+            <ion-icon class="icon-quantity" name="remove"></ion-icon>
+          </button>
+          <span>{{cartItem.quantity}}</span>
+          <button class="quantity-buttom" (click)="sumQuantity(cartItem.id)">
+            <ion-icon class="icon-quantity" name="add"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col size="2" class="price">
+          {{cartItem.price}}
+        </ion-col>
+        <ion-col size="2" class="icon-close" color="primary">
+          <ion-icon name="close" (click)="removeItem(cartItem.id)"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    <img class="image" src="../../assets/emptycart.png" *ngIf="cartEmpty">
+  </div>
+  <div *ngIf="!cartEmpty">
+    <h3> Total: R$ {{totalCart}} </h3>
+    <button ion-button class="payment" (click)="pagePayment()"> Fazer Pagamento </button>
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-content color="primary" no-padding>
+  <div class="form ">
+    <form #f="ngForm" (submit)="form_login(f)">
+      <h1 class="logo"> M </h1>
+      <h1 class="title"> MARVELOPÉDIA </h1>
+      <br>
+      <ion-item class="item-form" no-lines>
+        <ion-input class="email" placeholder="E-mail" type="text" value="" required ngModel name="email"></ion-input>
+      </ion-item>
+      <ion-item class="item-form" no-lines>
+        <ion-input type="text" placeholder="Senha" required ngModel name="password"
+          [type]="isTextFieldType ? 'text' : 'password'"></ion-input>
+        <ion-icon [name]="isTextFieldType ? 'eye' : 'eye-off'" (click)="togglePasswordFieldType()" color="primary">
+        </ion-icon>
+      </ion-item>
+      <br>
+      <button ion-button class="login" type="submit"> Login </button>
+    </form>
+  </div>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    Não tem uma conta? <b (click)="pageRegister()">Crie uma conta</b>
+  </ion-toolbar>
+</ion-footer>

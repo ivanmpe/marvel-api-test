@@ -1,0 +1,114 @@
+ion-title{
+    color: #D40000;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.background-list {
+    background: white;
+    margin-left: 5%;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    height: 70%;
+    min-height: 70%;
+    max-height: 70%;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+    box-shadow: 0%;
+}
+
+ion-row{
+    width: 100%;
+    padding-left: 2%;
+    align-items: center;
+}
+
+ion-col{
+    color: black;
+    padding-top: 5%;
+}
+
+.list-row{
+    border: none;
+}
+
+.icon-close{
+    color: gray;
+    padding: 2%;
+    font-size: 20px;
+}
+
+h3{
+    padding-left: 15%;
+    padding-top: 10%;
+    font-weight: bold;
+}
+
+
+ion-button{
+    background: transparent;
+    color: red;
+}
+
+.title{
+    font-size: 15px;
+    text-align: justify;
+    padding-top: 0%;
+}
+
+
+.quantity{
+    font-size: 18px;
+    padding: 5%;
+    text-align: center;
+}
+
+.item{
+    font-size: 12px;
+    text-align: center;
+    padding: 2%;
+}
+
+
+.price{
+    font-size: 20px;
+    text-align: center;
+    padding: 2%;
+}
+
+span{
+    color: #D40000;
+    margin: 2px;
+}
+
+.quantity-buttom{
+    margin: 0%;
+    padding: 0%;
+    background: transparent;
+}
+
+.icon-quantity{
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 18px;
+}
+
+ 
+.payment{
+    width: 80%;
+    text-transform: none;
+    color: white;
+    left: 50%;
+    background-color: #D40000;
+    font-size: 1.2em;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+}

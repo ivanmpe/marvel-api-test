@@ -1,0 +1,55 @@
+ion-item{
+    width: 40%;
+    background-color: black;
+}
+
+
+.btn-add{
+    width: 60%;
+    margin-bottom: 5px;
+    background-color:#D40000;
+    color: white;
+    margin-left: 5%;
+    height: 50px;
+    font-size: 20px;
+}
+.span-date{
+    font-size: 20px;
+}
+.btn-operation{
+    background-color:transparent;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.details{
+    padding-bottom: 20px;
+}
+
+.span-description{
+    text-align: justify;
+    font-weight: bold;
+}
+
+.span-qtd{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    color: #D40000;
+    font-weight: bold;
+}
+
+.span-price{
+  font-size: 20px;
+  color: #D40000;
+}
+
+
+
+
+.image{
+    width: 100%;
+    text-align: center;
+}

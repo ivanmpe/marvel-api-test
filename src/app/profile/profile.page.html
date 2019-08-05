@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-title> Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" padding>
+  <ion-list no-lines>
+    <ion-item color="primary" (click)="pageChangeAcquisitions()" lines="none">
+      <p> <strong> Pedidos </strong></p>
+    </ion-item>
+    <ion-item color="primary" (click)="pageChangePassword()" lines="none">
+      <p> <strong>Senha </strong></p>
+    </ion-item>
+    <ion-item color="primary" (click)="pageAbout()" lines="none" >
+      <p> <strong> Sobre </strong></p>
+    </ion-item>
+    <ion-item color="primary" (click)="showAlertLogout()" lines="none">
+      <p> <strong> Logout </strong></p>
+    </ion-item>
+  </ion-list>
+</ion-content>

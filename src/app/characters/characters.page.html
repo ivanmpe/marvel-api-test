@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title> Heróis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="onSearchChange($event)" placeholder="Pesquise um herói "></ion-searchbar>
+  <ion-list>
+    <ion-row>
+      <ion-col size="3" *ngFor="let character of characters">
+        <ion-avatar item-left (click)="pageDescription(character.id)">
+          <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+        </ion-avatar>
+        <b class="name">{{character.name}}</b>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)" *ngIf="searchEmpty">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

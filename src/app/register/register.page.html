@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> <b>Cadastro</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="primary" padding>
+  <div class="form">
+    <form #f="ngForm" (submit)="form_register(f)">
+      <ion-item no-lines class="item-form">
+        <ion-input type="text" placeholder="Email" required ngModel name="email"></ion-input>
+      </ion-item>
+      <ion-item no-lines class="item-form">
+        <ion-input type="text" placeholder="Senha" required ngModel name="password"
+          [type]="isTextFieldType ? 'text' : 'password'"></ion-input>
+        <ion-icon [name]="isTextFieldType ? 'eye' : 'eye-off'" (click)="togglePasswordFieldType()" color="primary">
+        </ion-icon>
+      </ion-item>
+      <ion-item no-lines class="item-form">
+        <ion-input type="password" placeholder="Repita Senha" required ngModel name="password2"
+          [type]="isTextFieldType2 ? 'text' : 'password'"></ion-input>
+        <ion-icon [name]="isTextFieldType2 ? 'eye' : 'eye-off'" (click)="toggleSecondPasswordFieldType()"
+          color="primary">
+        </ion-icon>
+      </ion-item>
+      <br>
+      <button ion-button type="submit" class="register"> Cadastrar </button>
+    </form>
+  </div>
+</ion-content>

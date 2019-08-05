@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="image">
+    <img src="{{image}}.{{extension}}">
+  </div>
+  <div class="details">
+    <h2><b>Descrição:</b></h2>
+    <span class="span-description">{{description}}</span>
+  </div>
+  <h2><b>Quadrinhos:</b></h2>
+  <ion-list>
+    <ion-row *ngFor="let comic of comics">
+      <ion-col>
+        <span class="name-comic"> <b> {{comic.name}} </b></span>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

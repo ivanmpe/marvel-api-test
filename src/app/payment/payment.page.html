@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> Pagamento </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="primary">
+  <div class="form">
+    <ion-item no-lines>
+      <ion-input placeholder="Número do cartão" type="text" mask="0000 0000 0000 0000" required ngModel name="numCard">
+      </ion-input>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-input placeholder="Nome impresso" type="text" required ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col no-lines>
+        <ion-item>
+          <ion-input placeholder="Validade" type="text" required ngModel name="validity" mask="00/0000"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col no-lines>
+        <ion-item>
+          <ion-input placeholder="Código de Seg." type="text" mask="000" required ngModel name="codSecurity">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <button ion-button class="btn-payment" (click)="presentLoading()"> Pagar agora! </button>
+  </div>
+</ion-content>

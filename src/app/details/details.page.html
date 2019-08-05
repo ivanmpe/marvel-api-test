@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-content padding>
+    <ion-list>
+      <ion-row *ngFor="let a of acquisition | async; let i = index">
+        <ion-col size="5"> <b> {{ a.title | json }} </b></ion-col>
+        <ion-col > <b> Qtd: {{ a.quantity | json }} </b></ion-col>
+        <ion-col > <b> R$ {{ a.price | json }} </b></ion-col>
+      </ion-row >
+      <ion-row>
+          <ion-col class="col" size="6"> <b> Data: {{ (item | async)?.datetime }} </b></ion-col>
+          <ion-col class="col" size="6"> <b> Total: R$ {{ (item | async)?.total }} </b></ion-col>
+      </ion-row>
+    </ion-list>
+    
+  </ion-content>
+
+</ion-content>

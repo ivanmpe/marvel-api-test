@@ -1,0 +1,41 @@
+ion-header::after {
+    background-image: none;
+}   
+
+
+ion-title{
+    color: #D40000;
+}
+
+.resume{
+    padding-left: 5%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+ion-item{
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: #000; 
+    background: transparent;
+    font-weight: bold;
+    margin-bottom: 1%;   
+}
+
+
+.btn-payment{
+    width: 50%;
+    text-transform: none;
+    color: white;
+    left: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.2em;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
+}
+

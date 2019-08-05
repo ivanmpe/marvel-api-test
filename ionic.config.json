@@ -1,0 +1,7 @@
+{
+  "name": "marvel-teste",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
