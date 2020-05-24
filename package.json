@@ -12,6 +12,9 @@
         "e2e": "ng e2e",
         "postinstall": "ng build --aot --prod"
     },
+    "engines": {
+        "node": "8.9.x"
+    },
     "private": true,
     "dependencies": {
         "@angular/common": "~8.1.2",
@@ -80,9 +83,6 @@
                 "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
             },
             "cordova-plugin-ionic-keyboard": {}
-        },
-        "engines": {
-            "node": "~8.9.4"
         },
         "platforms": [
             "android"
