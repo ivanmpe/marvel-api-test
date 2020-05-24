@@ -81,6 +81,9 @@
             },
             "cordova-plugin-ionic-keyboard": {}
         },
+        "engines": {
+            "node": "~8.9.4"
+        },
         "platforms": [
             "android"
         ]
